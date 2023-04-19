@@ -1,0 +1,11 @@
+.loginGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  color: aliceblue;
+
+  input {
+    max-width: 100px;
+  }
+}

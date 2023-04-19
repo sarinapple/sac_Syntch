@@ -1,0 +1,16 @@
+.registerGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: aliceblue;
+  padding: 1.5rem;
+
+  input {
+    margin: 0.5rem;
+    max-width: 100px;
+  }
+
+  .fileInput {
+    max-width: 300px;
+  }
+}
