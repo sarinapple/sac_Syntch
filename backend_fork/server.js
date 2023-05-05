@@ -5,12 +5,12 @@ import {log} from 'console'
 import userRouter from './Routes/userRouter.js'
 import tryRouter from './Routes/tryRouter.js'
 import contentRouter from './Routes/contentRouter.js'
-
+import cors from 'cors'
 config()
 connect()
 
 const server = express()
-
+server.use(cors({origin: '*'}))
 server.use(express.json())
 server.use(express.urlencoded({extended:false}))
 
