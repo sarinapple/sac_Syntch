@@ -1,5 +1,5 @@
 import "./App.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ClientRoutes from "./components/ClientRoutes/ClientRoutes";
 import Login from "./components/Login/Login";
 import Home from "./components/Home/Home";
@@ -7,19 +7,24 @@ import Home from "./components/Home/Home";
 // const currentUser = JSON.parse(localStorage.getItem());
 
 function App() {
-  // const [user, setUser] = useState(currentUser);
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState("");
 
-  // useEffect(() => {
-  //   localStorage.setItem('currentUser', JSON.stringify(user));
-  // }, [user]);
+  useEffect(() => {
+    if (localStorage.getItem("user")) {
+      setUser(JSON.parse(localStorage.getItem("user")));
+    } else {
+      setUser(null);
+    }
+    // localStorage.setItem("currentUser", JSON.stringify(user));
+  }, []);
 
   return (
     <div className="App">
       <h1>App Component</h1>
-      <ClientRoutes />
+      <ClientRoutes setUser={setUser} user={user} />
       {/* <Landing /> */}
-      {/* {user ? <Home /> : <Login setUser={setUser} />} */}
+      {/* {user ? <Home use={user} /> : <Login setUser={setUser} />} */}
     </div>
   );
 }

@@ -1,26 +1,36 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Home from '../Home/Home';
-import Login from '../Login/Login';
-import NotFound from '../NotFound/NotFound';
-import TryGame from '../TryGame/TryGame';
-import Register from '../Register/Register';
-import HowPlay from '../HowPlay/HowPlay';
+import React, { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "../Home/Home";
+import Login from "../Login/Login";
+import NotFound from "../NotFound/NotFound";
+import TryGame from "../TryGame/TryGame";
+import Register from "../Register/Register";
+import HowPlay from "../HowPlay/HowPlay";
 // import logoGold from '../../images/logoGold.png';
+import { createContext } from "react";
 
-const ClientRoutes = () => {
+const LoginContext = createContext();
+
+const ClientRoutes = (props) => {
+  const [loggedIn, setLoggedIn] = useState(true);
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/register" element={<Register />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/howPlay" element={<HowPlay />}></Route>
-        <Route path="/TryGame" element={<TryGame />}></Route>
-        <Route path="/*" element={<NotFound />}></Route>
-        <Route path="/test" element={'this is a test route'}></Route>
-      </Routes>
-    </div>
+    <LoginContext.Provider value={{ loggedIn, setLoggedIn }}>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home user={props.user} />}></Route>
+          <Route path="/register" element={<Register />}></Route>
+          <Route
+            path="/login"
+            setUser={(d) => console.log(d)}
+            element={<Login setUser={props.setUser} user={props.user} />}
+          ></Route>
+          <Route path="/howPlay" element={<HowPlay />}></Route>
+          <Route path="/TryGame" element={<TryGame />}></Route>
+          <Route path="/*" element={<NotFound />}></Route>
+          <Route path="/test" element={"this is a test route"}></Route>
+        </Routes>
+      </div>
+    </LoginContext.Provider>
   );
 };
 
