@@ -8,13 +8,14 @@ import Register from "../Register/Register";
 import HowPlay from "../HowPlay/HowPlay";
 // import logoGold from '../../images/logoGold.png';
 import { createContext } from "react";
+import { LoginProvider } from '../../LoginProvider'
 
-const LoginContext = createContext();
+// const LoginContext = createContext();
 
 const ClientRoutes = (props) => {
-  const [loggedIn, setLoggedIn] = useState(true);
+  // const [loggedIn, setLoggedIn] = useState(true);
   return (
-    <LoginContext.Provider value={{ loggedIn, setLoggedIn }}>
+    <LoginProvider>
       <div>
         <Routes>
           <Route path="/" element={<Home user={props.user} />}></Route>
@@ -30,7 +31,7 @@ const ClientRoutes = (props) => {
           <Route path="/test" element={"this is a test route"}></Route>
         </Routes>
       </div>
-    </LoginContext.Provider>
+    </LoginProvider>
   );
 };
 

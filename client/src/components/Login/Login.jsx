@@ -13,7 +13,8 @@ const Login = (props) => {
   //   setEmail(e.target.value);
   // };
   // INSTEAD OF USE STATE WE USE CONTEXT AND PASS THE CREATED CONTEXT NAMED LoginContext
-  const [loggedIn, setLoggedIn] = useContext(LoginContext);
+  
+  const {loggedIn, setLoggedIn} = useContext(LoginContext);
 
   useEffect(() => {});
 
