@@ -1,17 +1,49 @@
-[ {"level":"beginner", "description":"Add all numeric values in an array together", "task01":"let array=[1,2,3,4,5] function findSum(array){let sum= 0 for(let i=0 ; i<array.length; i++){sum+= array[i]} return sum} let sumOfArray = findSum(array)"},
-        {"level":"beginner", "description":"Check if the number is even", "task02":"function isEven(num){return num %2===0}"},
-        {"level":"beginner", "description":"Find the highest number in the array", "task03":"const arrayMax = [12,24, 76, -84, 23, 0, 9] function max(arr) { return Math.max(...arr); } console.log(max(arrayMax))"},
-        {"level":"beginner", "description":"Calculate the area of a circle", "task04":"function calculateArea(radius) { return Math.PI * radius ** 2 }"},
-        {"level":"intermediate", "description":"Find out how many vowels there are/ Return the number (count) of vowels in the given string.", "task01":""},
-        {"level":"intermediate", "description":"Calculate the average", "task02":"const calcAverage = function(arr){let sum = 0 for(let i=0; i<arr.length; i++){sum+= arr[i]} console.log(sum) return sum/arr.length} calcAverage([2,3,6])"},
-        {"level":"intermediate", "description":"Calculate total bill including 15% tip for bills between $50-$300, and 20% for the rest", "task03":"const calcTip = (bill) => {if (bill >= 50 && bill <= 300) {return bill * 0.15} else {return bill * 0.2}}"},
-        {"level":"intermediate", "description":"", "":""},
-        {"level":"advanced", "description":"Program the button to turn the same button ON and Off", "task01":"<html><body> <button onClick='sw()'> ON </button> <script> function sw(){let btn = document.querySelector('button')btn.innerText === 'ON' ? btn.innerText = 'Off' : btn.innerText='ON'}</script></body></html>"},
-        {"level":"advanced", "description":"Calculate future age based on birthyear", "task02":"function calcAge(birthYear){const age = 2037 - birthYear function printAge(){const output = `${firstName} is ${age}, born in ${birthYear}`if(birthYear >= 1981 && birthYear <= 1996){const str = `Oh, you are a millenial: ${firstName}`}}printAge()"},
-        {"level":"advanced", "description":"", "":""} 
+[
+  {
+    "level": "beginner",
+    "description": "Add all numeric values in an array together",
+    "task01": "let array=[1,2,3,4,5] function findSum(array){let sum= 0 for(let i=0 ; i<array.length; i++){sum+= array[i]} return sum} let sumOfArray = findSum(array)"
+  },
+  {
+    "level": "beginner",
+    "description": "Check if the number is even",
+    "task02": "function isEven(num){return num %2===0}"
+  },
+  {
+    "level": "beginner",
+    "description": "Find the highest number in the array",
+    "task03": "const arrayMax = [12,24, 76, -84, 23, 0, 9] function max(arr) { return Math.max(...arr); } console.log(max(arrayMax))"
+  },
+  {
+    "level": "beginner",
+    "description": "Calculate the area of a circle",
+    "task04": "function calculateArea(radius) { return Math.PI * radius ** 2 }"
+  },
+  {
+    "level": "intermediate",
+    "description": "Find out how many vowels there are/ Return the number (count) of vowels in the given string.",
+    "task01": ""
+  },
+  {
+    "level": "intermediate",
+    "description": "Calculate the average",
+    "task02": "const calcAverage = function(arr){let sum = 0 for(let i=0; i<arr.length; i++){sum+= arr[i]} console.log(sum) return sum/arr.length} calcAverage([2,3,6])"
+  },
+  {
+    "level": "intermediate",
+    "description": "Calculate total bill including 15% tip for bills between $50-$300, and 20% for the rest",
+    "task03": "const calcTip = (bill) => {if (bill >= 50 && bill <= 300) {return bill * 0.15} else {return bill * 0.2}}"
+  },
+  { "level": "intermediate", "description": "", "": "" },
+  {
+    "level": "advanced",
+    "description": "Program the button to turn the same button ON and Off",
+    "task01": "<html><body> <button onClick='sw()'> ON </button> <script> function sw(){let btn = document.querySelector('button')btn.innerText === 'ON' ? btn.innerText = 'Off' : btn.innerText='ON'}</script></body></html>"
+  },
+  {
+    "level": "advanced",
+    "description": "Calculate future age based on birthyear",
+    "task02": "function calcAge(birthYear){const age = 2037 - birthYear function printAge(){const output = `${firstName} is ${age}, born in ${birthYear}`if(birthYear >= 1981 && birthYear <= 1996){const str = `Oh, you are a millenial: ${firstName}`}}printAge()"
+  },
+  { "level": "advanced", "description": "", "task?": "" }
 ]
-    
-
-
-
-

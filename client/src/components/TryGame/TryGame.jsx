@@ -1,6 +1,6 @@
-import React from 'react';
-import './try_game_style.scss';
-import Home_Btn from '../Home_Btn/Home_Btn';
+import React from "react";
+import "./try_game_style.scss";
+import Home_Btn from "../Home_Btn/HomeBtn";
 
 const TryGame = () => {
   return (
