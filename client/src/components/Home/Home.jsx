@@ -1,12 +1,37 @@
-import React from 'react';
-import './home_style.scss';
-import logoGold from '../../images/logoGold.png';
-import { NavLink } from 'react-router-dom';
+import "./home_style.scss";
+import logoGold from "../../images/logoGold.png";
+import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Home = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const userIn = localStorage.getItem("user");
+    console.log("userIn", userIn);
+
+    if (userIn) {
+      setLoggedIn(true);
+    }
+
+    console.log({ loggedIn });
+  }, []);
+
+  const logoutHandler = () => {
+    localStorage.removeItem("user");
+    console.log("i logged out");
+
+    // eslint-disable-next-line no-restricted-globals
+    location.reload(true);
+  };
+
   return (
     <div className="homeContainer">
-      <img src={logoGold} alt="Syntch Logo" style={{ color: 'white', width: '250px' }} />
+      <img
+        src={logoGold}
+        alt="Syntch Logo"
+        style={{ color: "white", width: "250px" }}
+      />
       <h5>Syntch Home Component</h5>
       {/* <img
         className="smurf"
@@ -22,16 +47,24 @@ const Home = () => {
         {/* <NavLink to="/TryGame">
           <button className="opener">Try</button>
         </NavLink> */}
-        <NavLink to="/TryGame">
-          <button className="opener">Try Me!</button>
+        <NavLink to="/try-game">
+          <button className="opener">{loggedIn ? "Play Me" : "Try Me"}</button>
         </NavLink>
-        <NavLink to="/Register">
+        <NavLink to="/register">
           <button className="opener">Register</button>
         </NavLink>
 
-        <NavLink to="/Login">
-          <button className="opener">Login</button>
-        </NavLink>
+        {!loggedIn && (
+            <NavLink to="/register">
+              <button className="opener">Register</button>
+            </NavLink>
+          ) && (
+            <NavLink to="/login">
+              <button className="opener">Login</button>
+            </NavLink>
+          )}
+
+        {loggedIn && <button onClick={logoutHandler}> Logout </button>}
       </div>
     </div>
   );

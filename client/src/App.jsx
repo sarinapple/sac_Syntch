@@ -1,14 +1,15 @@
 import "./App.scss";
 import { useState, useEffect } from "react";
 import ClientRoutes from "./components/ClientRoutes/ClientRoutes";
-import Login from "./components/Login/Login";
-import Home from "./components/Home/Home";
+// import Login from "./components/Login/Login";
+// import Home from "./components/Home/Home";
 
 // const currentUser = JSON.parse(localStorage.getItem());
 
 function App() {
   const [user, setUser] = useState(null);
-  // const [user, setUser] = useState("");
+
+  //
 
   useEffect(() => {
     if (localStorage.getItem("user")) {

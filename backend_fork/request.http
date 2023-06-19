@@ -2,9 +2,9 @@ POST http://localhost:1111/api/v1/user/register
 Content-Type: application/json
 
 {
-    "username":"mos01",
+    "username":"tim",
     "password": "123456",
-    "email":"mos@abc.com"
+    "email":"t@abc.com"
 }
 
 
@@ -13,9 +13,9 @@ POST http://localhost:1111/api/v1/user/login
 Content-Type: application/json
 
 {
-    "username":"mos01",
+    "username":"tim",
     "password": "123456",
-    "email":"mos@abc.com"
+    "email":"t@abc.com"
 
 }
 

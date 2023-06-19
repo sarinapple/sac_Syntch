@@ -1,6 +1,6 @@
 // import { useEffect, useState } from "react";
 import "./how_play_style.scss";
-import Home_Btn from "../Home_Btn/Home_Btn";
+import Home_Btn from "../Home_Btn/HomeBtn";
 
 const HowPlay = () => {
   // const [name, setName] = useState("");

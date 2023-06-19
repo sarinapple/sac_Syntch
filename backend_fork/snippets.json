@@ -1,140 +1,118 @@
-{
-  "beginner": [
-    {
-      "task1": {
-        "description": "Add all numeric values in an array together",
-        "snippet": "let array=[1,2,3,4,5] function findSum(array){let sum= 0 for(let i=0 ; i<array.length; i++){sum+= array[i]} return sum} let sumOfArray = findSum(array)"
+[
+  {
+    "beginner": [
+      {
+        "task1": {
+          "description": "Function to compute the sum of two numbers",
+          "snippet": "function add(a, b) { return a + b; }"
+        }
+      },
+      {
+        "task2": {
+          "description": "Function to check if a number is even",
+          "snippet": "function isEven(num) { return num % 2 === 0; }"
+        }
+      },
+      {
+        "task3": {
+          "description": "Function to find the maximum number in an array",
+          "snippet": "function max(arr) { return Math.max(...arr); }"
+        }
+      },
+      {
+        "task4": {
+          "description": "Function to capitalize the first letter of a string",
+          "snippet": "function capitalize(str) { return str.charAt(0).toUpperCase() + str.slice(1); }"
+        }
+      },
+      {
+        "task5": {
+          "description": "Function to reverse a string",
+          "snippet": "function reverse(str) { return str.split('').reverse().join(''); }"
+        }
+      },
+      {
+        "task6": {
+          "description": "Function to calculate the area of a circle",
+          "snippet": "function calculateArea(radius) { return Math.PI radius * 2 }"
+        }
+      },
+      {
+        "task7": {
+          "description": "Function to calculate the factorial of a number",
+          "snippet": "function factorial(num) { if (num === 0 || num === 1) return 1; else return num * factorial(num - 1) }"
+        }
+      },
+      {
+        "task8": {
+          "description": "Function to remove duplicate elements from an array",
+          "snippet": "function removeDuplicates(arr) { return Array.from(new Set(arr)) }"
+        }
       }
-    },
-    {
-      "task2": {
-        "description": "Function to check if a number is even",
-        "snippet": "function isEven(num){return num %2===0}"
+    ],
+    "intermediate": [
+      {
+        "task1": {
+          "description": "Function to find the average value of an array of numbers",
+          "snippet": "function average(arr) { return arr.reduce((acc, val) => acc + val, 0) / arr.length; }"
+        }
+      },
+      {
+        "task2": {
+          "description": "Function to remove an item at a specific index from an array",
+          "snippet": "function removeAt(arr, index) { return arr.splice(index, 1); }"
+        }
+      },
+      {
+        "task3": {
+          "description": "Function to flatten a nested array",
+          "snippet": "function flatten(arr) { return arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []); }"
+        }
+      },
+      {
+        "task4": {
+          "description": "Function to shuffle the elements of an array",
+          "snippet": "function shuffle(arr) { for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [arr[i], arr[j]] = [arr[j], arr[i]]; } return arr; }"
+        }
+      },
+      {
+        "task5": {
+          "description": "Function to convert a string to title case",
+          "snippet": "function toTitleCase(str) { return str.toLowerCase().replace(/\bw/g, (char) => char.toUpperCase()); }"
+        }
       }
-    },
-    {
-      "task3": {
-        "description": "Find the highest number in the array",
-        "snippet": "const arrayMax = [12,24, 76, -84, 23, 0, 9] function max(arr) { return Math.max(...arr); } console.log(max(arrayMax))"
+    ],
+    "advanced": [
+      {
+        "task1": {
+          "description": "Function to check if a string is a palindrome",
+          "snippet": "function isPalindrome(str) { const reversedStr = str.split('').reverse().join(''); return str === reversedStr; }"
+        }
+      },
+      {
+        "task2": {
+          "description": "Function to flatten an array of nested arrays",
+          "snippet": "function flattenArray(arr) { return arr.reduce((acc, curr) => acc.concat(Array.isArray(curr) ? flattenArray(curr) : curr), []); }"
+        }
+      },
+      {
+        "task3": {
+          "description": "Function to implement a basic calculator that supports addition, subtraction, multiplication, and division",
+          "snippet": "function calculator(operator, num1, num2) { switch (operator) { case '+': return num1 + num2; case '-': return num1 - num2; case '*': return num1 * num2; case '/': return num1 / num2; default: return 'Invalid operator'; } }"
+        }
+      },
+      {
+        "task4": {
+          "description": "Function to generate a random password",
+          "snippet": "function generatePassword(length) { const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()'; let password = ''; for (let i = 0; i < length; i++) { password += chars[Math.floor(Math.random() * chars.length)]; } return password; }"
+        }
+      },
+      {
+        "task5": {
+          "description": "Function to shuffle an array",
+          "snippet": "function shuffleArray(arr) { for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [arr[i], arr[j]] = [arr[j], arr[i]]; } return arr; }"
+        }
       }
-    },
-    {
-      "task4": {
-        "description": "Function to capitalize the first letter of a string",
-        "snippet": "function capitalize(str) { return str.charAt(0).toUpperCase() + str.slice(1); }"
-      }
-    },
-    {
-      "task5": {
-        "description": "Calculate the average",
-        "snippet": "const calcAverage = function(arr){let sum = 0 for(let i=0; i<arr.length; i++){sum+= arr[i]} console.log(sum) return sum/arr.length} calcAverage([2,3,6])"
-      }
-    },
-    {
-      "task6": {
-        "description": "Function to calculate the area of a circle",
-        "snippet": "function calculateArea(radius) { return Math.PI radius * 2 }"
-      }
-    },
-    {
-      "task7": {
-        "description": "Function to calculate the factorial of a number",
-        "snippet": "function factorial(num) { if (num === 0 || num === 1) return 1; else return num * factorial(num - 1) }"
-      }
-    },
-    {
-      "task8": {
-        "description": "Function to remove duplicate elements from an array",
-        "snippet": "function removeDuplicates(arr) { return Array.from(new Set(arr)) }"
-      }
-    }
-  ],
-  "intermediate": [
-    {
-      "task1": {
-        "description": "Function to find the average value of an array of numbers",
-        "snippet": "function average(arr) { return arr.reduce((acc, val) => acc + val, 0) / arr.length; }"
-      }
-    },
-    {
-      "task2": {
-        "description": "Function to remove an item at a specific index from an array",
-        "snippet": "function removeAt(arr, index) { return arr.splice(index, 1); }"
-      }
-    },
-    {
-      "task3": {
-        "description": "Function to flatten a nested array",
-        "snippet": "function flatten(arr) { return arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []); }"
-      }
-    },
-    {
-      "task4": {
-        "description": "Function to shuffle the elements of an array",
-        "snippet": "function shuffle(arr) { for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [arr[i], arr[j]] = [arr[j], arr[i]]; } return arr; }"
-      }
-    },
-    {
-      "task5": {
-        "description": "Function to convert a string to title case",
-        "snippet": "function toTitleCase(str) { return str.toLowerCase().replace(/\bw/g, (char) => char.toUpperCase()); }"
-      }
-    },
-    {
-      "task6": {
-        "description": "Calculate total bill including 15% tip for bills between $50-$300, and 20% for the rest",
-        "snippet": "const calcTip = (bill) => {if (bill >= 50 && bill <= 300) {return bill * 0.15} else {return bill * 0.2}}"
-      }
-    },
-    {
-      "task7": {
-        "description": "Find out how many vowels there are/ Return the number (count) of vowels in the given string.",
-        "snippet": ""
-      }
-    }
-  ],
-  "advanced": [
-    {
-      "task1": {
-        "description": "Function to check if a string is a palindrome",
-        "snippet": "function isPalindrome(str) { const reversedStr = str.split('').reverse().join(''); return str === reversedStr; }"
-      }
-    },
-    {
-      "task2": {
-        "description": "Function to flatten an array of nested arrays",
-        "snippet": "function flattenArray(arr) { return arr.reduce((acc, curr) => acc.concat(Array.isArray(curr) ? flattenArray(curr) : curr), []); }"
-      }
-    },
-    {
-      "task3": {
-        "description": "Function to implement a basic calculator that supports addition, subtraction, multiplication, and division",
-        "snippet": "function calculator(operator, num1, num2) { switch (operator) { case '+': return num1 + num2; case '-': return num1 - num2; case '*': return num1 * num2; case '/': return num1 / num2; default: return 'Invalid operator'; } }"
-      }
-    },
-    {
-      "task4": {
-        "description": "Function to generate a random password",
-        "snippet": "function generatePassword(length) { const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()'; let password = ''; for (let i = 0; i < length; i++) { password += chars[Math.floor(Math.random() * chars.length)]; } return password; }"
-      }
-    },
-    {
-      "task5": {
-        "description": "Function to shuffle an array",
-        "snippet": "function shuffleArray(arr) { for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [arr[i], arr[j]] = [arr[j], arr[i]]; } return arr; }"
-      }
-    },
-    {
-      "task6": {
-        "description": "Program the button to turn the same button ON and Off",
-        "snippet": "<html><body> <button onClick='sw()'> ON </button> <script> function sw(){let btn = document.querySelector('button')btn.innerText === 'ON' ? btn.innerText = 'Off' : btn.innerText='ON'}</script></body></html>"
-      }
-    },
-    {
-      "task7": {
-        "description": "Calculate future age based on birthyear",
-        "snippet": "function calcAge(birthYear){const age = 2037 - birthYear function printAge(){const output = `${firstName} is ${age}, born in ${birthYear}`if(birthYear >= 1981 && birthYear <= 1996){const str = `Oh, you are a millenial: ${firstName}`}}printAge()"
-      }
-    }
-  ]
-}
+    ]
+  }
+]
